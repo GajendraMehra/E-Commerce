@@ -1,0 +1,119 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMaster.master.cs" Inherits="Admin_AdminMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Shop Homepage - Start Bootstrap Template</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../css/shop-homepage.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        body {
+            background-image: url(../img/background.jpeg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+
+        .ch {
+            border: 1px solid green;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Admin Panel </a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="#">Men</a>
+                        </li>
+                        <li>
+                            <a href="#">Women</a>
+                        </li>
+                        <li>
+                            <a href="#">Electronic</a>
+                        </li>
+                        <li>
+                            <a href="#">Appliances</a>
+                        </li>
+                        <li>
+                            <a href="#">Appliances</a>
+                        </li>
+                        <li>
+                            <a href="#">Appliances</a>
+                        </li>
+
+
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        
+                     <li><a href="Login.aspx"><span class="glyphicon glyphicon-log-out"></span>
+                         <asp:Label ID="lbl_user" runat="server" Text="Label"></asp:Label></a></li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-3">
+
+                    <div class="list-group">
+                        <a href="#" class="list-group-item my">Add Men Clothes</a>
+                        <a href="#" class="list-group-item my">Add Women clothes</a>
+                        <a href="#" class="list-group-item my">Electronic</a>
+                        <a href="#" class="list-group-item my">Appliances</a>
+                        <a href="#" class="list-group-item my">House Items</a>
+                        <a href="#" class="list-group-item my">Electronic</a>
+                        <a href="#" class="list-group-item my">Add Men Clothes</a>
+                        <a href="#" class="list-group-item my">Add Women clothes</a>
+                        <a href="#" class="list-group-item my">Electronic</a>
+                    </div>
+                </div>
+
+                <div class="col-md-9">
+                    <div>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
