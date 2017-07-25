@@ -41,6 +41,7 @@
     </style>
 </head>
 <body>
+
     <form id="form1" runat="server">
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container">
@@ -79,9 +80,9 @@
 
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        
-                     <li><a href="Login.aspx"><span class="glyphicon glyphicon-log-out"></span>
-                         <asp:Label ID="lbl_user" runat="server" Text="Label"></asp:Label></a></li>
+
+                        <li><a href="Login.aspx"><span class="glyphicon glyphicon-log-out"></span>
+                            <asp:Label ID="lbl_user" runat="server" Text="Label"></asp:Label></a></li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -94,16 +95,14 @@
                 <div class="col-md-3">
 
                     <div class="list-group">
-                        <a href="#" class="list-group-item my">Add Men Clothes</a>
-                        <a href="#" class="list-group-item my">Add Women clothes</a>
-                        <a href="#" class="list-group-item my">Electronic</a>
+                        <a href="AddCategory.aspx" class="list-group-item my">Add Category</a>
+                        <a href="AddSub.aspx" class="list-group-item my">Add Sub Category</a>
+                        <a href="AddPrice.aspx" class="list-group-item my">Products</a>
                         <a href="#" class="list-group-item my">Appliances</a>
                         <a href="#" class="list-group-item my">House Items</a>
                         <a href="#" class="list-group-item my">Electronic</a>
-                        <a href="#" class="list-group-item my">Add Men Clothes</a>
-                        <a href="#" class="list-group-item my">Add Women clothes</a>
-                        <a href="#" class="list-group-item my">Electronic</a>
-                    </div>
+
+                    </div> 
                 </div>
 
                 <div class="col-md-9">
@@ -111,7 +110,12 @@
                         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                         </asp:ContentPlaceHolder>
                     </div>
+
                 </div>
+                <script src="js/jquery.js"></script>
+
+                <!-- Bootstrap Core JavaScript -->
+                <script src="js/bootstrap.min.js"></script>
             </div>
         </div>
     </form>

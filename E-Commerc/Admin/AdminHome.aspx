@@ -2,7 +2,6 @@
 
 <asp:Content ID="tdg" ContentPlaceHolderID="head" runat="server"></asp:Content>
 <asp:Content ID="login" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    bcvb
     
 </asp:Content>
 
