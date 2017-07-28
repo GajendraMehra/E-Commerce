@@ -105,13 +105,14 @@
                     </div> 
                 </div>
 
-                <div class="col-md-9">
+                
                     <div>
                         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            
                         </asp:ContentPlaceHolder>
                     </div>
 
-                </div>
+                
                 <script src="js/jquery.js"></script>
 
                 <!-- Bootstrap Core JavaScript -->
