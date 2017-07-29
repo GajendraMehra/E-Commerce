@@ -19,5 +19,17 @@ public partial class Home : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
 
+        repeat();
+    }
+    public void repeat()
+    {
+        cmd = new SqlCommand("select * from sale_products ", con);
+        sd = new SqlDataAdapter(cmd);
+        dt = new DataTable();
+        sd.Fill(dt);
+        rpt.DataSource = dt;
+        rpt.DataBind();
+
+
     }
 }

@@ -1,7 +1,28 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Home.aspx.cs" Inherits="Home" MasterPageFile="~/MasterPage.master" %>
 
-<asp:Content ID="sad" ContentPlaceHolderID="head" runat="server"></asp:Content>
+<asp:Content ID="sad" ContentPlaceHolderID="head" runat="server">
+    <style>
+        .ch{
+            border:1px solid red;
+            
+        }
+        .imag{
+           border:1px solid red;
+           height:200px;
+          
+            
+            
+        }
+        .imag:hover{
+            transform:scale(1.15,1.15);
+            transition-duration:1.5s;
+
+        }
+    </style>
+  
+</asp:Content>
 <asp:Content ID="fsd" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    
     <div class="col-md-9">
 
         <div class="row carousel-holder">
@@ -36,18 +57,24 @@
         </div>
 
         <div class="row">
+            <asp:Repeater ID="rpt" runat="server">
+                <HeaderTemplate>
 
-            <div class="col-sm-4 col-lg-4 col-md-4">
+                </HeaderTemplate>
+                <ItemTemplate>
+                      <div class="col-sm-4 col-lg-4 col-md-4">
                 <div class="thumbnail">
-                    <img src="img/ts900905-ghpc-l-original-imaeqyhsd2vfhgpz.jpeg" alt="">
+                    <div class="">
+                    <img src='<%# Eval("image")%>'  alt="Image of product" class="imag ">
+                        </div>
                     <div class="caption">
-                        <h4 class="pull-right">$24.99</h4>
-                        <h4><a href="#">First Product</a>
+                        <h4 class="ch"=><%# Eval("real")%></h4>
+                        <h4><a href="#"><%#Eval("product_name") %></a>
                         </h4>
-                        <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
+                        <p><%# Eval("descript")%></p>
                     </div>
                     <div class="ratings">
-                        <p class="pull-right">15 reviews</p>
+                        <p>.....<asp:Button runat="server" Text="Read More" CssClass="btn btn-primary pull-right"></asp:Button></p>
                         <p>
                             <span class="glyphicon glyphicon-star"></span>
                             <span class="glyphicon glyphicon-star"></span>
@@ -59,100 +86,23 @@
                 </div>
             </div>
 
-            <div class="col-sm-4 col-lg-4 col-md-4">
-                <div class="thumbnail">
-                    <img src="img/ts900905-ghpc-l-original-imaeqyhsd2vfhgpz.jpeg" alt="">
-                    <div class="caption">
-                        <h4 class="pull-right">$64.99</h4>
-                        <h4><a href="#">Second Product</a>
-                        </h4>
-                        <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                    <div class="ratings">
-                        <p class="pull-right">12 reviews</p>
-                        <p>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star-empty"></span>
-                        </p>
-                    </div>
-                </div>
-            </div>
+                </ItemTemplate>
 
-            <div class="col-sm-4 col-lg-4 col-md-4">
-                <div class="thumbnail">
-                    <img src="img/ts900902-ghpc-xxl-original-imaeqyhsywkxh2ft%20(1).jpeg" alt="">
-                    <div class="caption">
-                        <h4 class="pull-right">$74.99</h4>
-                        <h4><a href="#">Third Product</a>
-                        </h4>
-                        <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                    <div class="ratings">
-                        <p class="pull-right">31 reviews</p>
-                        <p>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star-empty"></span>
-                        </p>
-                    </div>
-                </div>
-            </div>
+                <FooterTemplate>
 
-            <div class="col-sm-4 col-lg-4 col-md-4">
-                <div class="thumbnail">
-                    <img src="img/m-300034-maniac-original-imaevry8kyrpqemy.jpeg" alt="">
-                    <div class="caption">
-                        <h4 class="pull-right">$84.99</h4>
-                        <h4><a href="#">Fourth Product</a>
-                        </h4>
-                        <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                    <div class="ratings">
-                        <p class="pull-right">6 reviews</p>
-                        <p>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star-empty"></span>
-                            <span class="glyphicon glyphicon-star-empty"></span>
-                        </p>
-                    </div>
-                </div>
-            </div>
+                </FooterTemplate>        
 
-            <div class="col-sm-4 col-lg-4 col-md-4">
-                <div class="thumbnail">
-                    <img src="img/m-300034-maniac-original-imaevry8kyrpqemy.jpeg" alt="">
-                    <div class="caption">
-                        <h4 class="pull-right">$94.99</h4>
-                        <h4><a href="#">Fifth Product</a>
-                        </h4>
-                        <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                    <div class="ratings">
-                        <p class="pull-right">18 reviews</p>
-                        <p>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star-empty"></span>
-                        </p>
-                    </div>
-                </div>
-            </div>
+            </asp:Repeater>
 
-            <div class="col-sm-4 col-lg-4 col-md-4">
+          
+       
+
+<%--            <div class="col-sm-4 col-lg-4 col-md-4">
                 <h4><a href="#">Like this template?</a>
                 </h4>
                 <p>If you like this template, then check out <a target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">this tutorial</a> on how to build a working review system for your online store!</p>
                 <a class="btn btn-primary" target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">View Tutorial</a>
-            </div>
+            </div>--%>
 
         </div>
         <script src="js/jquery.js"></script>
