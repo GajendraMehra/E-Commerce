@@ -1,0 +1,181 @@
+﻿.test {
+    border: 1px solid red;
+}
+
+.ch1 {
+    border-right: 2px solid gray;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+.dc {
+    color: greenyellow;
+    background-color: greenyellow;
+}
+
+.imag {
+    border: 10px solid white;
+    height: 200px;
+}
+
+.logo {
+    border-radius: 60px;
+    float: left;
+    margin-top: -10px;
+}
+
+.imag:hover {
+    transform: scale(1.02);
+    transition-duration: 0.5s;
+}
+
+body {
+    background-image: url();
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.navbar {
+    background-color: #f05b47;
+}
+
+#ho:hover {
+    background-color: #1e8dcf;
+}
+
+.active {
+    background-color: #3ab6da;
+    border-radius: 5px;
+}
+
+.menutext {
+    color: white;
+    line-height: 20px;
+    letter-spacing: 1.5px;
+    font-size: 16px
+}
+
+.gray {
+    background-color: #eee;
+}
+
+.heading {
+    background-color: #bfaf80;
+}
+
+.costommenu {
+    font-family: 'Merriweather', serif;
+    font-size: 16px;
+    background-color: #f2eeb3;
+}
+
+.glyphicon-home {
+    color: white;
+}
+
+.item {
+}
+
+
+
+.product_image {
+    height: 500px;
+}
+
+.desig {
+    color: black;
+    font-family: 'IM Fell Double Pica SC', serif;
+    font-size: 20px;
+}
+
+.value {
+    font-family: 'Mirza', cursive;
+    font-size: 20px;
+}
+
+.spechead {
+    letter-spacing: 3px;
+}
+.contact_us_icon_div {
+    background-color: #000000;
+    width: 20px;
+    height: 20px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+}
+.top_break {
+    padding-top: 120px;
+}
+.footer_logo {
+    height: 30px;
+}
+
+
+.footer_logo_list li.social_icon:hover {
+    color: #ffffff;
+    background-color: #000000;
+}
+
+.contact_us_icon_div1 {
+    border: 1px solid #000000;
+    background-color: #ffffff;
+    width: 30px;
+    height: 30px;
+    color: #000000;
+    text-align: center;
+    font-size: 15px;
+    text-align: center;
+}
+
+.contact_us_icon_div1 {
+    transform: rotate(40deg);
+}
+
+.contact_us_icon1 {
+    transform: rotate(320deg);
+}
+
+.contact_us_icon_div1:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.copyright {
+    text-decoration: none;
+    font-size: 12px;
+    color: gray;
+    letter-spacing: 10px;
+}
+
+.top_break {
+    padding-top: 120px;
+}
+
+footer {
+    background-color: #F4F4F4;
+
+}
+.contact_us_icon_div1 {
+    transform: rotate(40deg);
+}
+
+
+
+
+.black_bg {
+    background-color:black;
+}
+.looking_for {
+    font-family: Dosis, arial, sans-serif;
+    font-size: 18px;
+    letter-spacing: 5px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.sub_para {
+    font-family: Dosis, arial, sans-serif;
+    font-size: 12px;
+    color: #ffffff;
+}
