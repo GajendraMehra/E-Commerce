@@ -17,38 +17,49 @@
 
     <!-- Custom CSS -->
     <link href="../css/shop-homepage.css" rel="stylesheet">
+    <link href="../css/index.css" rel="stylesheet" />
     <style>
-         body {
-            background-image: url(../img/moon.jpeg);
+        body {
             background-size: cover;
-          //  background-repeat: no-repeat;
+            background-image:url("../img/greenary.jpeg");
+            // background-repeat: no-repeat;
         }
-         .ch{
-
-         }
-       
+        panel-body{
+            background-color:transparent;
+        }
+        .ch {
+        }
     </style>
     <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
 
 </head>
 <body>
     <form id="form1" runat="server">
-    <div class="container">
-        <div class="row ">
-        <div class="col-md-6 col-md-offset-3 ch text-muted">
-            <div class="form-group ">
-                <label for="usr">Name:</label>
-                <input type="text"  id="usr" runat="server" class="form-control"/>
+        <div class="container">
+            <div class="row ">
+                <div class="col-md-6 col-md-offset-3 ch text-muted">
+                    <div class=" ">
+                        <div class="panel-heading text-center text-uppercase spechead">
+                            Adnin Login Panel
+                        </div>
+                        <div class="panel-body">
+
+                            <div class="form-group ">
+                                <label for="usr">Name:</label>
+                                <input type="text" id="usr" runat="server" class="form-control" autocomplete="off"  />
+                            </div>
+                            <div class="form-group">
+                                <label for="pwd">Password:</label>
+                                <input type="password" id="pwd" runat="server" class="form-control" />
+                            </div>
+                            <asp:Button ID="Button1" runat="server" Text="Log In" CssClass="btn btn-danger pull-right" OnClick="Button1_Click" />
+                        </div>
+
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="pwd">Password:</label>
-                <input type="password" id="pwd" runat="server"  class="form-control"/>
-            </div>
-            <asp:Button ID="Button1" runat="server" Text="Log In" OnClick="Button1_Click" /> 
+
         </div>
-    </div>
-    
-    </div>
     </form>
 </body>
 </html>

@@ -1,7 +1,16 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="SignUp.aspx.cs" MasterPageFile="~/MasterPage.master" Inherits="SignUp" %>
 
 <asp:Content ID="signuphead" ContentPlaceHolderID="head" runat="server">
-
+   <script type="text/javascript">
+       function validatedata()
+       {
+           //var first = document.getElementById("fname").valu;
+         
+           alert("eNTER FIELDS");
+           //return false;
+           
+       }
+    </script>
    
 </asp:Content>
 <asp:Content ID="signupcontent" ContentPlaceHolderID="contentPlaceholder1" runat="server">
@@ -18,9 +27,9 @@
                             <label>First Name</label>
                         </div>
                         <div class="col-md-10">
-                            <input type="text" class=" validate[required,custom[phone],minSize[10],maxSize[10] form-control" autocomplete="off" id="fname" runat="server">
+                            <input type="text" class="form-control" autocomplete="off" id="fname" runat="server">
                         </div>
-
+                         
                     </div>
                     <br />
                     <div class="row">
@@ -114,7 +123,7 @@
                     <div class="row">
                         <div class="col-md-12">
 
-                            <asp:Button runat="server" OnClientClick="jQuery('#form1').submit();" CssClass="btn-primary btn-lg pull-right" Text="Sign Up" OnClick="Unnamed1_Click"></asp:Button>
+                            <asp:Button runat="server" ID="va" OnClientClick="return validatedata();" CssClass="btn-primary btn-lg pull-right" Text="Sign Up" OnClick="Unnamed1_Click"></asp:Button>
 
                         </div>
                     </div>
@@ -123,5 +132,12 @@
             </div>
         </div>
     </div>
-
+   <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#va).click(function(){
+            }
+        )
+        });
+    </script>
 </asp:Content>

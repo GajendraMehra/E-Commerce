@@ -56,12 +56,20 @@ public partial class desciption : System.Web.UI.Page
             pname = dr["product_name"].ToString();
         }
         con.Close();
-        if (Request.Cookies["aa"] == null)
+        HttpCookie cart = new HttpCookie("cart");
+      
+        if ( cart["aa"] == null)
         {
-            Response.Cookies["aa"].Value = pname.ToString();
+            cart["aa"] = pname.ToString();
+            
+            cart.Expires = DateTime.Now.AddDays(1);
+            Response.Cookies.Add(cart);
+        }
+        else
+        {
+            Response.Cookies["aa"].Value = Response.Cookies["aa"].Value + pname.ToString();
             Response.Cookies["aa"].Expires = DateTime.Now.AddDays(1);
         }
-
 
     }
 }   
